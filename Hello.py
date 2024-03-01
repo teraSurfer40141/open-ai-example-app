@@ -33,13 +33,19 @@ def run():
     st.title("Generate your own image!")
 
     col1,col2 = st.columns([3,5])
-    image_style = col2.selectbox('Choose your painting style',["A photo of ", "An oil painting of "])
-    animal = col2.selectbox('Choose your animal',["fuzzy panda ","british shorthair cat ","Persian Cat ","Shiba Inu Dog ","racoon "])
+
+    #Choices
+    image_style = col2.selectbox('Choose your painting style',["A photo of ", "An oil painting of ","A manga drawing of "])
+    number = col2.text_input("Number of animals")
+    animal = col2.selectbox('Choose your animal',[" fuzzy pandas "," british shorthair cats "," Persian Cats "," Shiba Inu Dogs "," racoons "])
     hat = col2.selectbox("Choose your hat",["wearing a fedora and ","wearing a cowboy hat and ","wearing a motorcycle helmet and "])
     outfit = col2.selectbox("Choose your outfit",["red shirt ","black leather jacket "])
     activity = col2.selectbox("Choose an activity",["playing a guitar ","skateboarding ","riding a bike "])
-    location = col2.selectbox("Choose a location",["on a beach.","in a garden.","on top of a mountain."])
-    prompt = image_style + animal + hat + outfit + activity + location
+    location = col2.selectbox("Choose a location",["on a beach ","in a garden ","on top of a mountain "])
+    additional_details = col2.text_area("Any additional details for prompt engineering")
+    
+    
+    prompt = image_style + number + animal + hat + outfit + activity + location + additional_details
     st.write("Your choice is: " + prompt)
     image_button = st.button("Generate image!")
 
