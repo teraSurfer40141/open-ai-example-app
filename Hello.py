@@ -32,9 +32,9 @@ def run():
     hat = col2.selectbox("Choose your hat",["wearing a fedora and ","wearing a cowboy hat and ","wearing a motorcycle helmet and "])
     outfit = col2.selectbox("Choose your outfit",["red shirt ","black leather jacket "])
     activity = col2.selectbox("Choose an activity",["playing a guitar ","skateboarding ","riding a bike "])
-    location = col2.selectbox("Choose a location",["on a beach ","in a garden ","on top of a mountain "])
+    location = col2.selectbox("Choose a location",["on a beach.","in a garden.","on top of a mountain."])
     prompt = image_style + animal + hat + outfit + activity + location
-    st.write("Your choice is " + prompt)
+    st.write("Your choice is: " + prompt)
     image_button = st.button("Generate image!")
 
     if image_button:
