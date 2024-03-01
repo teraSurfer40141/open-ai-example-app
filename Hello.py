@@ -34,6 +34,7 @@ def run():
     activity = col2.selectbox("Choose an activity",["playing a guitar","skateboarding","riding a bike"])
     location = col2.selectbox("Choose a location",["on a beach","in a garden","on top of a mountain"])
     prompt = image_style + animal + hat + outfit + activity + location
+    st.write("Your choice is " + prompt)
     image_button = st.button("Generate image!")
 
     if image_button:
